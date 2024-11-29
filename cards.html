@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<style>
+			body {
+				background: #bbf;
+			}
+			#header {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 10vh;
+				background: #fff;
+
+				h1 {
+					color: #000;
+					font-family: arial;
+					font-size: 2vh;
+					line-height: 2vh;
+				}
+				#rgb {
+					width: 500vw;
+					height: 5px;
+					/*                                   0      50      100     150     200     250     300     350      400    450      500 */
+					background: linear-gradient(90deg, #f00, #f0a, #a0f, #0ff, #0f0, #ff0, #fa0, #f00, #f0a, #a0f, #0ff);
+					animation: 20s infinite normal rgb-strip;
+
+					position: absolute;
+					left: 0;
+					bottom: 5px;
+				}
+			}
+
+			@keyframes rgb-strip {
+				0% {
+					transform: translateX(0);
+				}
+				100% {
+					transform: translateX(-350vw);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<h1>My Cards</h1>
+			<div id="rgb"></div>
+		</div>
+	</body>
+</html>
